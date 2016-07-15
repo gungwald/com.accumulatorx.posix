@@ -1,0 +1,21 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+sourceCompatibility = 1.5
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'com.accumulatorx.posix',
+                   'Implementation-Version': version
+    }
+}
+
+eclipse {
+    classpath {
+        defaultOutputDir = file("build/classes/main")
+    }
+}
+
+repositories {
+    mavenCentral()
+}
